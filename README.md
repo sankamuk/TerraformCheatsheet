@@ -25,6 +25,7 @@ In Unix system set environment
 ```
 export AWS_ACCESS_KEY_ID="AWS ACCOUNT ACCESS KEY"
 export AWS_SECRET_ACCESS_KEY="AWS ACCOUNT ACCESS SECRET"
+export AWS_DEFAULT_REGION="AWS ACCOUNT DEFAULT REGION"
 ```
 
 - `Inside your module script`
@@ -51,5 +52,27 @@ Initialize
 apple@apples-MacBook-Air project01 % ~/Softwares/terraform init
 ```
 
+### To execute
 
+You can validate your setup with
+```
+apple@apples-MacBook-Air s3 % ~/Softwares/terraform plan
+```
+
+> Look for + for new resource created.
+
+To apply your code interactive
+```
+apple@apples-MacBook-Air s3 % ~/Softwares/terraform apply
+```
+
+To apply your code interactive
+```
+apple@apples-MacBook-Air s3 % ~/Softwares/terraform apply -auto-approve
+```
+
+To clean up your deployment
+```
+apple@apples-MacBook-Air s3 % ~/Softwares/terraform destroy -auto-approve
+```
 
